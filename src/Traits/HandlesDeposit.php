@@ -26,7 +26,7 @@ trait HandlesDeposit
         }
 
         if ($amount <= 0) {
-            throw new InvalidValueException();
+            throw new InvalidValueException;
         }
 
         DB::transaction(function () use ($type, $amount, $notes) {
